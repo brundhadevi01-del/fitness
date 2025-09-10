@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fit Flex | Your Personal Fitness Companion</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">Fit Flex</div>
+    <nav>
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#workouts">Workouts</a></li>
+        <li><a href="#trainers">Trainers</a></li>
+        <li><a href="#nutrition">Nutrition</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Fit Flex</h1>
+      <p>Your Personal Fitness Companion is designed to keep you motivated, focused, and consistent on your health journey. From personalized workout plans to nutrition tips and progress tracking, it provides everything you need to stay on top of your fitness goals. Whether you are just starting out or already a fitness enthusiast, this companion helps you build healthy habits, push your limits, and achieve a stronger, healthier version of yourself.</p>
+      <a href="#workouts" class="btn">Explore Workouts</a>
+    </div>
+  </section>
+
+  <!-- Workouts Section -->
+  <section id="workouts">
+    <h2>Popular Workouts</h2>
+    <div class="grid" id="workoutGrid"></div>
+    <button id="loadMoreWorkouts">Load More</button>
+  </section>
+
+  <!-- Trainers Section -->
+  <section id="trainers">
+    <h2>Meet Our Trainers</h2>
+    <div class="grid" id="trainersGrid"></div>
+  </section>
+
+  <!-- Nutrition Section -->
+  <section id="nutrition">
+    <h2>Nutrition Tips</h2>
+    <div class="grid" id="nutritionGrid"></div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Fit Flex. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

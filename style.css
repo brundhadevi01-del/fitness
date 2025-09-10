@@ -1,0 +1,288 @@
+/* ----------------- RESET ----------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ----------------- HEADER ----------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #111;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.3s;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+  color: #f39c12;
+  transform: scale(1.1);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ----------------- HERO ----------------- */
+.hero {
+  height: 100vh;
+  background: url('hero-bg.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease forwards;
+}
+
+.hero-content p {
+  font-size: 24px;
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.hero-content .btn {
+  padding: 12px 30px;
+  background: #f39c12;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.hero-content .btn:hover {
+  background: #e67e22;
+  transform: scale(1.05);
+}
+
+/* ----------------- GRID SECTIONS ----------------- */
+section h2 {
+  text-align: center;
+  margin: 40px 0 20px;
+  font-size: 32px;
+  color: #111;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 40px 40px 40px;
+}
+
+/* ----------------- CARD ----------------- */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.card h3 {
+  padding: 15px;
+  font-size: 20px;
+}
+
+.card p {
+  padding: 0 15px 15px 15px;
+  font-size: 16px;
+  color: #666;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* ----------------- BUTTON ----------------- */
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 25px;
+  background: #f39c12;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background: #e67e22;
+  transform: scale(1.05);
+}
+
+/* ----------------- CONTACT FORM ----------------- */
+form {
+  max-width: 600px;
+  margin: 20px auto 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+form input, form textarea {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+form input:focus, form textarea:focus {
+  border-color: #f39c12;
+  transform: scale(1.02);
+  outline: none;
+}
+
+form button {
+  padding: 12px;
+  border: none;
+  background: #f39c12;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+form button:hover {
+  background: #e67e22;
+  transform: scale(1.05);
+}
+
+/* ----------------- FOOTER ----------------- */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: #fff;
+}
+
+/* ----------------- MEDIA QUERIES ----------------- */
+@media (max-width: 1024px) {
+  header {
+    padding: 15px 30px;
+  }
+  .hero-content h1 {
+    font-size: 40px;
+  }
+  .hero-content p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  header nav ul {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+  header nav ul.show {
+    display: flex;
+  }
+  header nav ul li {
+    margin: 10px 0;
+  }
+  .grid {
+    padding: 0 20px 20px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 32px;
+  }
+  .hero-content p {
+    font-size: 18px;
+  }
+  .btn {
+    padding: 10px 20px;
+  }
+}
+
+/* ----------------- ANIMATIONS ----------------- */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
